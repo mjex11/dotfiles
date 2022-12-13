@@ -11,7 +11,7 @@ link:
 
 # Set zsh
 shell:
-    make/setup_zsh.sh
+    make/set_zsh.sh
 
 # Install macOS applications.
 brew:
