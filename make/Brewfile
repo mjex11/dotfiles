@@ -1,0 +1,47 @@
+cask_args appdir: "/Applications"
+
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+
+brew "git"
+brew "vim"
+brew "starship"
+brew "global"
+brew "fzf"
+brew "repgrep"
+brew "zsh"
+brew "zsh-completions"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting$"
+brew "anyenv"
+brew "awscli"
+brew "nkf"
+
+ # ----------------------------------------
+ # コメントアウトしたアプリは、SelfServiceからインストールしてください
+ # 管理者権限が不要で、アップデートが可能になります。
+ # ----------------------------------------
+
+# cask "google-chrome"
+# cask "google-japanese-ime"
+# cask "alfred"
+# cask "iterm2"
+# cask "clipy"
+# cask "postman"
+# cask "karabiner-elements"
+# cask "hammerspoon"
+# cask "visual-studio-code"
+# cask "skitch"
+# cask "coteditor"
+# cask "figma"
+# cask "zoom"
+# cask "slack"
+
+cask "coccinellida"
+cask "docker"
+cask "postico"
+cask "thunderbird"
+
