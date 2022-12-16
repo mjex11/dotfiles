@@ -1,5 +1,5 @@
 # Do everything.
-all: init link brew shell
+all: init link brew shell vim
 
 # Set initial preference.
 init:
@@ -15,5 +15,9 @@ brew:
 
 # Set zsh
 shell:
-	make/set_zsh.sh
+	make/shell.sh
+
+# Vim
+vim:
+	make/vim.sh
 

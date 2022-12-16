@@ -9,5 +9,5 @@ if [[ $(uname -p) == 'arm' ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# アプリをインストールします
+echo "Homebrewからアプリをインストールします"
 brew bundle --file './make/Brewfile'
