@@ -1,3 +1,8 @@
+# M1でbrewを使用する時に必要
+if [[ $(uname -p) == 'arm' ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # setup zsh-comletions
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -5,9 +10,6 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
-
-# starship
-eval "$(starship init zsh)"
 
 # ssh接続先によって、背景色を変える(補完を呼び出すのを忘れずに)
 alias ssh=$HOME/ssh-host-color.sh
@@ -42,3 +44,6 @@ zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# starship
+eval "$(starship init zsh)"

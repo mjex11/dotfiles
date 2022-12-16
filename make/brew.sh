@@ -5,5 +5,9 @@ if [ "$(uname)" != "Darwin" ] ; then
 	exit 1
 fi
 
-brew bundle --global
+if [[ $(uname -p) == 'arm' ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
+# アプリをインストールします
+brew bundle --file './make/Brewfile'

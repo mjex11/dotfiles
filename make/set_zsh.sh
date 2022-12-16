@@ -3,8 +3,16 @@
 echo '現在使用しているシェルを確認します'
 echo $SHELL
 
-sudo sh -c "echo /usr/local/bin/zsh >> /etc/shells"
+if [[ $(uname -p) == 'arm' ]] ; then
+  SHELL_DIR='/opt/homebrew/bin/zsh'
+else
+  SHELL_DIR='/usr/local/bin/zsh'
+fi
+
+if [ -z $(grep $SHELL_DIR /etc/shells) ]; then
+  echo ${SHELL_DIR} | sudo tee -a /etc/shells
+fi
 
 echo 'ログインシェルを変更します'
-chsh -s /usr/local/bin/zsh
 
+sudo chsh -s ${SHELL_DIR}

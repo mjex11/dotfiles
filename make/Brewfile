@@ -11,19 +11,14 @@ brew "vim"
 brew "starship"
 brew "global"
 brew "fzf"
-brew "repgrep"
+brew "ripgrep"
 brew "zsh"
 brew "zsh-completions"
 brew "zsh-autosuggestions"
-brew "zsh-syntax-highlighting$"
+brew "zsh-syntax-highlighting"
 brew "anyenv"
 brew "awscli"
 brew "nkf"
-
- # ----------------------------------------
- # コメントアウトしたアプリは、SelfServiceからインストールしてください
- # 管理者権限が不要で、アップデートが可能になります。
- # ----------------------------------------
 
 # cask "google-chrome"
 # cask "google-japanese-ime"
