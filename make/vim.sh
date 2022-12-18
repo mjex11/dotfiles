@@ -1,5 +1,7 @@
 #!/bin/sh
 
 echo "deinをインストールします"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh)"
+if [ -e $HOME/.cache/dein/repos/github.com/Shougo/dein.vim ];then
+  sh -c "$(curl -fssl https://raw.githubusercontent.com/shougo/dein.vim/master/bin/installer.sh)"
+fi
 

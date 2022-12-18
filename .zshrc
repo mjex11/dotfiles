@@ -17,8 +17,7 @@ compdef _ssh $HOME/ssh-host-color.sh=ssh
 
 # alias
 alias ls='ls -F --color=auto'
-alias ll='ls -lt'
-alias la='ls -lat'
+alias ll='ls -lart'
 alias vi='vim'
 
 # cdしたらls

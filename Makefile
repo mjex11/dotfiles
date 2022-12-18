@@ -1,23 +1,23 @@
 # Do everything.
-all: init link brew shell vim
+all: init brew link shell vim
 
 # Set initial preference.
 init:
 	make/init.sh
 
-# Link dotfiles.
-link:
-	make/link.sh
-
 # Install macOS applications.
 brew:
 	make/brew.sh
+
+# Link dotfiles.
+link:
+	make/link.sh
 
 # Set zsh
 shell:
 	make/shell.sh
 
-# Vim
+# Set Vim preference.
 vim:
 	make/vim.sh
 

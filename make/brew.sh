@@ -5,6 +5,7 @@ if [ "$(uname)" != "Darwin" ] ; then
 	exit 1
 fi
 
+# M1でbrewコマンドを使えるようにする
 if [[ $(uname -p) == 'arm' ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
