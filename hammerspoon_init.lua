@@ -42,7 +42,3 @@ hs.hotkey.bind(mash, 'h', function() hs.window.focusedWindow():move(units.left50
 hs.hotkey.bind(mash, 'k', function() hs.window.focusedWindow():move(units.top50, nil, true) end)
 hs.hotkey.bind(mash, 'f', function() hs.window.focusedWindow():move(units.bot50, nil, true) end)
 
-hs.hotkey.bind({"ctrl", "cmd"}, "down", function()
-     local method = hs.keycodes.currentMethod()
-     hs.alert.show(method)
-end)
