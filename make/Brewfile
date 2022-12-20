@@ -19,6 +19,7 @@ brew "zsh-syntax-highlighting"
 brew "anyenv"
 brew "awscli"
 brew "nkf"
+brew "gh"
 
 # cask "google-chrome"
 # cask "google-japanese-ime"

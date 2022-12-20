@@ -46,3 +46,5 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # starship
 eval "$(starship init zsh)"
+
+source /Users/y.goto/.docker/init-zsh.sh || true # Added by Docker Desktop
