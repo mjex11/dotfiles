@@ -12,8 +12,8 @@ if type brew &>/dev/null; then
 fi
 
 # ssh接続先によって、背景色を変える(補完を呼び出すのを忘れずに)
-alias ssh=$HOME/ssh-host-color.sh
-compdef _ssh $HOME/ssh-host-color.sh=ssh
+alias ssh=$HOME/.ssh/ssh-host-color.sh
+compdef _ssh $HOME/.ssh/ssh-host-color.sh=ssh
 
 # alias
 alias ls='ls -F --color=auto'
