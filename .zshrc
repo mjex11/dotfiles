@@ -42,9 +42,10 @@ zstyle ':completion:*:default' menu select=2
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
 # starship
 eval "$(starship init zsh)"
 
 source /Users/y.goto/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+. $(brew --prefix asdf)/libexec/asdf.sh
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
