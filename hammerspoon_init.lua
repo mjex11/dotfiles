@@ -1,6 +1,7 @@
 local simpleCmd = false
 local map = hs.keycodes.map
 
+-- 入力ソースをleft commandで英数、right commandでかなにする
 local function kanaSwitchEvent(event)
     local c = event:getKeyCode()
     local f = event:getFlags()
@@ -28,6 +29,7 @@ kanaSwitcher = hs.eventtap.new(
 )
 kanaSwitcher:start()
 
+-- hjklでウィンドウを操作
 hs.window.animationDuration = 0
 units = {
   right50       = { x = 0.50, y = 0.00, w = 0.50, h = 1.00 },
