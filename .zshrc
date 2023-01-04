@@ -19,6 +19,7 @@ compdef _ssh $HOME/.ssh/ssh-host-color.sh=ssh
 alias ls='ls -F --color=auto'
 alias ll='ls -lart'
 alias vi='vim'
+alias vs='open -a Visual\ Studio\ Code'
 
 # cdしたらls
 chpwd () { ls -a }
@@ -48,4 +49,6 @@ eval "$(starship init zsh)"
 source /Users/y.goto/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 . $(brew --prefix asdf)/libexec/asdf.sh
+. ~/.asdf/plugins/java/set-java-home.zsh
+
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
