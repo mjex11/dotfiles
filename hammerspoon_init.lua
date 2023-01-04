@@ -1,3 +1,5 @@
+hs.alert.show("Config loaded")
+
 local simpleCmd = false
 local map = hs.keycodes.map
 
@@ -29,6 +31,7 @@ kanaSwitcher = hs.eventtap.new(
 )
 kanaSwitcher:start()
 
+
 -- hjklでウィンドウを操作
 hs.window.animationDuration = 0
 units = {
@@ -43,4 +46,34 @@ hs.hotkey.bind(mash, 'l', function() hs.window.focusedWindow():move(units.right5
 hs.hotkey.bind(mash, 'h', function() hs.window.focusedWindow():move(units.left50, nil, true) end)
 hs.hotkey.bind(mash, 'k', function() hs.window.focusedWindow():move(units.top50, nil, true) end)
 hs.hotkey.bind(mash, 'f', function() hs.window.focusedWindow():move(units.bot50, nil, true) end)
+
+
+local function remap(mods, key, fn)
+    return hs.hotkey.bind(mods, key, fn, nil, fn)
+end
+
+local function keyCode(key, modifiers)
+   modifiers = modifiers or {}
+   return function()
+      hs.eventtap.event.newKeyEvent(modifiers, string.lower(key), true):post()
+      hs.timer.usleep(1000)
+      hs.eventtap.event.newKeyEvent(modifiers, string.lower(key), false):post()
+   end
+end
+
+-- escapeを押した時に入力ソースを英数に変換する
+remap({ }, 'escape' function()
+    hs.eventtap.event.newKeyEvent(modifiers, string.lower('escape'), true):post()
+    hs.timer.usleep(1000)
+    hs.eventtap.event.newKeyEvent(modifiers, string.lower('escape'), false):post()
+    hs.keycodes.setMethod('Romaji')
+end)
+
+-- ctr + ] を押した時に入力ソースを英数に変換し、escapeする
+remap({ 'control' }, ']', function()
+    hs.eventtap.event.newKeyEvent(modifiers, string.lower('escape'), true):post()
+    hs.timer.usleep(1000)
+    hs.eventtap.event.newKeyEvent(modifiers, string.lower('escape'), false):post()
+    hs.keycodes.setMethod('Romaji')
+end)
 
