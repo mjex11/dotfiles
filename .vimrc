@@ -132,6 +132,7 @@ if has("autocmd")
   augroup END
 endif
 
+" vim-lsp
 if empty(globpath(&rtp, 'autoload/lsp.vim'))
   finish
 endif
