@@ -62,7 +62,7 @@ local function keyCode(key, modifiers)
 end
 
 -- escapeを押した時に入力ソースを英数に変換する
-remap({ }, 'escape' function()
+remap({ }, 'escape', function()
     hs.eventtap.event.newKeyEvent(modifiers, string.lower('escape'), true):post()
     hs.timer.usleep(1000)
     hs.eventtap.event.newKeyEvent(modifiers, string.lower('escape'), false):post()
