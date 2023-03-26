@@ -1,0 +1,12 @@
+[alias]
+  s = status
+  ss = status -s
+  co = checkout
+  br = branch
+
+[init]
+	defaultBranch = main
+[user]
+	name = mjex11
+	email = gotoh5120mj@gmail.com
+
