@@ -14,4 +14,4 @@ brew cleanup
 brew doctor
 
 echo "Homebrewからアプリをインストールします"
-brew bundle --file './make/Brewfile'
+brew bundle --file './shells/Brewfile'
